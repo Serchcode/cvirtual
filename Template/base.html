@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>{%block titulo%}Véndelo-facil{%endblock titulo%}</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'%}">
+
+</head>
+<body id="page-top" >
+  <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Sergio Pérez Bautista</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">Acerca de mi</a></li>
+            <li><a href="">Habilidades</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Portafolio</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+  </div>
+
+{%block content%}
+
+{%endblock content%}
+
+<footer class="mastfoot footer">
+  <div class="container pt-20 pb-50">
+    <div class="row">
+      <article class="col-md-12 text-center">
+          <a class="page-scroll" style="color:white" href="#page-top"><i class="fa fa-angle-up fa-4x"></i></a>
+        <ul class="foot-social">
+            <li>
+                <a href="#" class="btn btn-default btn-lg">
+                    <i class="fa fa-facebook fa-fw"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-default btn-lg">
+                    <i class="fa fa-github fa-fw"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-default btn-lg">
+                    <i class="fa fa-heart fa-fw"></i>
+                </a>
+            </li>
+        </ul>
+      </article>
+    </div>
+    <div class="row">
+      <article class="col-md-12 text-center pt-20">
+        <blockquote style='border: none;'>
+          <p>Copyright © Sergio Pérez 2017</p>
+          <p>Politica de privacidad</p>
+      </article>
+    </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+
+    $('#page-top').click(function(){
+        $('body, html').animate({
+            scrollTop: '0px'
+        }, 1000);
+    });
+
+    $(window).scroll(function(){
+        if( $(this).scrollTop() > 0 ){
+            $('#page-top').slideDown(1000);
+        } else {
+            $('.page-top').slideUp(1000);
+        }
+    });
+
+});
+
+</script>
+</body>
