@@ -1,0 +1,40 @@
+{%extends "base.html"%}	
+{%load static%}
+
+{%block content%}
+<div id="Habilidades">
+	<div class="container centered">
+		<h1>Hobbies</h1>
+		<div style="padding-top:25px" class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">	
+				<h1>JavaScript</h1>
+				<p>En mis tiempos libres me gusta mucho aprender mas sobre este lenguaje de programacion,
+				ya que es un lenguaje del cual se han basado muchos frameworks y librerias en especial la libreria
+				de React.js.</p>
+				<img class="js" src="{% static "media/js.png" %}" alt="js">	
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<h1>React.js</h1>
+				<p>React.js es una  libreria que libero facebook para los desarrolladores, es un proyecto que me interesa mucho ya que cambia un poco la manera del desarollo web y sobre todo es una liberia de la cual depende Facebook y por consiguiente tiene un soporte y seguimiento impresionante de la comunidad.</p>
+				<img class="react" src="{% static "media/re.png" %}" alt="react">
+			</div>
+		</div>
+	</div>
+	<div class="container centered">
+		<h1>Entre otras cosas...</h1>
+		<div style="padding-top:25px" class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">	
+				<h1>Basquetball</h1>
+				<p>Me gusta practicar basquetball el cual me parece que es un deporte muy completo y el cual disfruto mucho practicar.</p>
+				<img class="bskt" src="{% static "media/ba.png" %}" alt="basquetball">	
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<h1>Ver peliculas de los 80</h1>
+				<p>Me encanta ver peliculas de estilo de 80 y 90 una de mis peliculas favoritas es Pulp Fiction de Quentin Tarantino.</p>
+				<img class="pul" src="{% static "media/pu.png" %}" alt="pulp Fiction">
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock content%}
+

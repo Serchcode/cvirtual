@@ -5,12 +5,34 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title>{%block titulo%}Véndelo-facil{%endblock titulo%}</title>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'%}">
+	<title>{%block titulo%}Sergio Pérez{%endblock titulo%}</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css'%}">
+  <style>
+ 
+  .scrollToTop{
+  width:100px; 
+  height:130px;
+  padding-top:400px; 
+  padding-left: 100px;
+  text-align:center; 
+  background: whiteSmoke;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  position:fixed;
+  top:75px;
+  right:40px;
+  display:none;
+  background: url('arrow_up.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}
+  </style>
 
 </head>
 <body id="page-top" >
@@ -22,14 +44,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Sergio Pérez Bautista</a>
+          <a class="navbar-brand animated bounceInLeft" href="index.html">Sergio Pérez Bautista</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="">Acerca de mi</a></li>
-            <li><a href="">Habilidades</a></li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="">Portafolio</a></li>
+            <li><a href="{%url 'index'%}">Acerca de mi</a></li>
+            <li><a href="{%url 'skills'%}">Skills</a></li>
+            <li><a href="{%url 'hobbies'%}">Hobbies</a></li>
+            <li><a href="{% url 'portfolio'%}">Portafolio</a></li>
+            <li><a href="{% url 'curriculum'%}">Curriculum</a></li>
+            <li><a href="{% url 'contacto' %}">Contacto</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -43,7 +67,7 @@
   <div class="container pt-20 pb-50">
     <div class="row">
       <article class="col-md-12 text-center">
-          <a class="page-scroll" style="color:white" href="#page-top"><i class="fa fa-angle-up fa-4x"></i></a>
+          <a class="scrollToTop"  href="#page-top"><i class="fa fa-arrow-circle-up fa-4x"></i></a>
         <ul class="foot-social">
             <li>
                 <a href="#" class="btn btn-default btn-lg">
@@ -74,25 +98,45 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'js/viewportchecker.js'%}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</script>
+{%block scripts%}
 <script>
 $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+</script>
+<script>
+  jQuery(document).ready(function() {
+    jQuery('.skills, .front').viewportChecker({classToAdd: 'visible animated fadeIn',offset: 100});
+    jQuery('.python').viewportChecker({classToAdd:'visible animated fadeInLeft',offset:100});
+    jQuery('.dj').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});
+    jQuery('.js').viewportChecker({classToAdd:'visible animated bounceInDown',offset:100});
+    jQuery('.react').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});    
+    jQuery('.bskt, .pul').viewportChecker({classToAdd:'visible animated wobble',offset:100});
+    jQuery('.formacion').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});
+    jQuery('.panel').viewportChecker({classToAdd:'visible animated shake',offset:100});
+    jQuery('.color').viewportChecker({classToAdd:'visible animated fadeIn',offset:100});
+    jQuery('#contact').viewportChecker({classToAdd:'visible animated bounceIn',offset:100});
 
-    $('#page-top').click(function(){
-        $('body, html').animate({
-            scrollTop: '0px'
-        }, 1000);
-    });
-
-    $(window).scroll(function(){
-        if( $(this).scrollTop() > 0 ){
-            $('#page-top').slideDown(1000);
-        } else {
-            $('.page-top').slideUp(1000);
-        }
-    });
 
 });
-
 </script>
+{%endblock scripts%}
 </body>

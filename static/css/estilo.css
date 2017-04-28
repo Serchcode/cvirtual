@@ -1,0 +1,240 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*Estilos Generales*/
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+
+.centered {
+    text-align: center;
+}
+
+/*Estilos de mi navbar*/
+.navbar {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.navbar-inverse {
+  padding-bottom: 35px;
+  padding-top: 35px;
+}
+
+.navbar-inverse {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #222222;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+
+
+/*Estilos de algunos elementos y animaciones*/
+.formacion{
+  width: 170px;
+  height: 150px;  
+  opacity: 0;
+}
+
+
+#Hola {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #E3F2FD;
+}
+
+#Habilidades {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #FFF176;
+}
+
+
+.fotito{
+  width: 200px;
+  height: 200px;
+  border-radius: 500px;
+
+} 
+
+.skills{
+  width: 200px;
+  height: 100px;
+  opacity: 0;
+
+} 
+
+.front{
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+.python{
+  width: 300px;
+  height: 150px;
+  opacity: 0;
+}
+
+.dj{
+  opacity: 0;
+}
+
+.react{
+
+  width: 220px;
+  height: 200px;  
+ 
+}
+
+@media only screen and (max-width: 600px) {
+  .react{opacity: 0;}
+}
+
+.js{
+  width: 150px;
+  height: 150px;  
+}
+
+.bskt{
+  width: 150px;
+  height: 150px;  
+}
+
+.pul{
+  width: 300px;
+  height: 140px;
+}
+
+/*Estilos de mi footer*/
+.footer {
+  background-color: #2196F3;
+  color:white;
+  }
+
+.foot-social {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.foot-social li {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.foot-social a {
+  text-decoration: none;
+  background: transparent;
+  color: white;
+}
+/*Estilos para paneles*/
+
+.panel-default:hover{
+box-shadow: 0px 5px 5px #2196F3;
+animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+.panel-default{
+background-color: #E3F2FD;
+}
+
+.panel-default > .panel-heading-custom{
+  background: #2196F3;
+  color: #fff;
+
+}
+
+.panel-default > .panel-footer-custom{
+  background: #2196F3;
+  color: #fff;
+
+}
+
+.vendelo{
+	width: 100px;
+	height: 100px;
+}
+
+.terreno{
+	padding-top: 33px;
+}
+
+.scrollToTop{
+  width:100px; 
+  height:130px;
+  padding:10px; 
+  text-align:center; 
+  background: whiteSmoke;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  position:fixed;
+  top:75px;
+  right:40px;
+  display:none;
+  background: url('arrow_up.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}

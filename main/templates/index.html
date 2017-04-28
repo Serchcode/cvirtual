@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{%load static%}
+
+
+
+{%block content%}
+
+<div id="Hola">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 centered">
+				<img class="fotito animated bounceInLeft" src="{% static "media/fotito.jpg" %}" alt="Sergio">
+				<h1>Hola Bienvenido :)</h1>
+				<p>Soy egresado como Licenciado en Sistemas Computaciones de la Universidad Autónoma del Estado de Hidalgo tengo 23 años y a continuación voy a mostrarte alguno de mis skills en el area de sistemas computacionales.</p>		
+			</div>
+		</div>
+	</div> 
+</div>
+<div id="Habilidades">
+	<div class="container centered">
+	   <h1>Formación Académica</h1>
+		<div class="row" style="padding-top:50px">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<h3>Centro de Bachillerato Tecnológico Industrial y de Servicios No. 222</h3>
+				<p>Mis estudios de bachillerato los desempeñe en el Centro de Bachillerato Tecnológico Industrial y de Servicios No. 222 donde elige la especialidad de Programacion.</p>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<img class="formacion" src="{% static "media/cb.png" %}" alt="Cbtis">
+			</div>
+		</div>
+		<div class="row" style="padding-top:50px">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<h3>Universidad Autonóma del Estado de Hidalgo</h3>
+				<p>Mis estudios de Nivel superior los desempeñe en la Universidad Autonóma del Estado de Hidalgo cursando satisfactoriamente la Licenciatura en Sistemas Computacionales Generacion 2012-2016.</p>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<img class="formacion" src="{% static "media/ua.png" %}" alt="UAEH">
+			</div>
+		</div>
+	</div>	
+</div>
+{%endblock content%}
+
+	
