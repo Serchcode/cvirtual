@@ -4,5 +4,5 @@ from main import urls as homeUrls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^',include(homeUrls)),
+    url(r'^',include(homeUrls,namespace="main")),
 ]
