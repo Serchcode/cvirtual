@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+ @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*Estilos Generales*/
 body {
@@ -26,124 +26,141 @@ h1, h2, h3, h4, h5, h6 {
      opacity:1;
 }
 
+
 .centered {
     text-align: center;
 }
 
+
+
 /*Estilos de mi navbar*/
-.navbar {
+div.navbar {
   text-transform: uppercase;
   margin-bottom: 0px;
 }
 
-.navbar-inverse {
+div.navbar-inverse {
   padding-bottom: 35px;
   padding-top: 35px;
 }
 
-.navbar-inverse {
+div.navbar-inverse {
   background-color: #2196F3;
   border-color: #2196F3;
 }
 
-.navbar-inverse .navbar-nav > li > a {
+div.navbar-inverse .navbar-nav > li > a {
   color: white;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
+div.navbar-inverse .navbar-nav > li > a:hover {
   color: #222222;
 }
 
-.navbar-brand {
+div.navbar-brand {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 2px;
 }
 
-.navbar-inverse .navbar-brand {
+div.navbar-inverse .navbar-brand {
   color: white;
 }
 
-.navbar-inverse .navbar-toggle {
+div.navbar-inverse .navbar-toggle {
   border-color: transparent;
 }
 
 
 /*Estilos de algunos elementos y animaciones*/
-.formacion{
-  width: 170px;
-  height: 150px;  
-  opacity: 0;
-}
-
-
-#Hola {
+div#Hola {
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: #E3F2FD;
 }
 
-#Habilidades {
+div#Hola img.fotito{
+  width: 200px;
+  height: 200px;
+  border-radius: 500px;
+
+}
+
+div#Habilidades {
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: #FFF176;
 }
 
-
-.fotito{
-  width: 200px;
-  height: 200px;
-  border-radius: 500px;
-
-} 
-
-.skills{
-  width: 200px;
-  height: 100px;
-  opacity: 0;
-
-} 
-
-.front{
-  width: 100px;
-  height: 100px;
+div#Habilidades .formacion{
+  width: 170px;
+  height: 150px;  
   opacity: 0;
 }
 
-.python{
+div#Habilidades .pyhthon{
   width: 300px;
   height: 150px;
   opacity: 0;
 }
 
-.dj{
+div#Habilidades .dj{
   opacity: 0;
 }
 
-.react{
+div#Habilidades .skills{
+  width: 200px;
+  height: 100px;
+  opacity: 0;
+
+} 
+
+div#Habilidades .front{
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+div#Habilidades img.js{
+  width: 150px;
+  height: 150px;  
+}
+
+
+div#Habilidades img.react{
 
   width: 220px;
   height: 200px;  
  
 }
 
+div#Habilidades img.terreno{
+  padding-top: 33px;
+}
+
+div#Habilidades img.vendelo{
+  width: 100px;
+  height: 100px;
+}
+
+
 @media only screen and (max-width: 600px) {
-  .react{opacity: 0;}
+  div#Habilidades img.react{opacity: 0;}
 }
 
-.js{
+
+div#Habilidades img.bskt{
   width: 150px;
   height: 150px;  
 }
 
-.bskt{
-  width: 150px;
-  height: 150px;  
-}
-
-.pul{
+div#Habilidades img.pul{
   width: 300px;
   height: 140px;
+}
+
+div#Habilidades div.color{
+    opacity: 0;
 }
 
 /*Estilos de mi footer*/
@@ -211,19 +228,12 @@ background-color: #E3F2FD;
 
 }
 
-.vendelo{
-	width: 100px;
-	height: 100px;
-}
 
-.terreno{
-	padding-top: 33px;
-}
-
-.scrollToTop{
+  .scrollToTop{
   width:100px; 
   height:130px;
-  padding:10px; 
+  padding-top:400px; 
+  padding-left: 100px;
   text-align:center; 
   background: whiteSmoke;
   font-weight: bold;
@@ -234,7 +244,37 @@ background-color: #E3F2FD;
   right:40px;
   display:none;
   background: url('arrow_up.png') no-repeat 0px 20px;
+  -webkit-animation: bounce 1s infinite;
 }
 .scrollToTop:hover{
   text-decoration:none;
+}
+@-webkit-keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+div#Habilidades div.color{
+  opacity: 0;
 }
