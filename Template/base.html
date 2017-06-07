@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css'%}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/loader.css'%}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css'%}">
+  <link href="{% static "css/vibrant-ink.css" %}" rel="stylesheet">
 </head>
 <body id="page-top" >
 <div class="load">
@@ -38,6 +39,7 @@
             <li><a href="{% url 'main:portfolio'%}">Portafolio</a></li>
             <li><a href="{% url 'main:curriculum'%}">Curriculum</a></li>
             <li><a href="{% url 'main:contacto' %}">Contacto</a></li>
+            <li><a href="{% url 'blog:lista' %}">Blog</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -80,10 +82,14 @@
   </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="{% static 'js/viewportchecker.js'%}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+<script src="{% static 'js/viewportchecker.js'%}"></script>
+<script src="{% static "js/prettify/prettify.js" %}"></script>
+
 {%block scripts%}
+
 
 <script type="text/javascript">
 jQuery(document).ready(function($) {  
@@ -113,6 +119,21 @@ $(document).ready(function(){
 });
 </script>
 <script>
+$(document).ready(function(){
+  $(".down").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+<script>
   jQuery(document).ready(function() {
     jQuery('.skills, .front').viewportChecker({classToAdd: 'visible animated fadeIn',offset: 100});
     jQuery('.python').viewportChecker({classToAdd:'visible animated fadeInLeft',offset:100});
@@ -124,9 +145,27 @@ $(document).ready(function(){
     jQuery('.panel').viewportChecker({classToAdd:'visible animated shake',offset:100});
     jQuery('.color').viewportChecker({classToAdd:'visible animated fadeIn',offset:100});
     jQuery('#contact').viewportChecker({classToAdd:'visible animated bounceIn',offset:100});
+    jQuery('.thumbnail').viewportChecker({classToAdd:'visible animated fadeInUp',offset:100});
 
 
 });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".content-markdown").each(function(){
+      var cont = $(this).text()
+      console.log(cont)
+      var markedcontent = marked(cont)
+      console.log(markedcontent)
+      $(this).html(markedcontent)
+    })
+  })
+</script>
+
+<script type='text/javascript'>
+      $('code').addClass('prettyprint');
+      prettyPrint();
 </script>
 {%endblock scripts%}
 </body>

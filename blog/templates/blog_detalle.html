@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%load static%}
+{% load markdown_deux_tags %}
+
+{%block content%}
+<div id="blog">
+	<div class="jumbotron" style="background-image: url('{{post.post_img.url}}'); background-repeat: no-repeat; background-size: 100% 100%;">
+	  <center>
+	  <span>{{post.post_title}}...</span>
+	  <p><a class=" down btn btn-primary btn-lg" href="#contenido" role="button"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></p>
+	  </center>
+	</div>
+</div>
+<div class="container">
+<div class="row">	
+	<div id="contenido" class="col-md-10 col-md-offset-1">				
+		{{ post.post_content|markdown }}
+	</div>
+</div>
+</div>
+{%endblock content%}

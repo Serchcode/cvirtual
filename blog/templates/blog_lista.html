@@ -1,0 +1,29 @@
+{%extends "base.html"%}
+{%load static%}
+
+
+
+{%block content%}
+
+<div id="Habilidades">
+	<div class="container">
+  <h1>Encuentra articulos sobre programacion en Django, React, Jquery y muchas...</h1>
+	<center>
+		<div class="row">
+			{% for ar in article  %}
+  			<div class="col-sm-6 col-md-4 col-lg-4">
+    			<div class="thumbnail">
+      				<img src="{{ar.post_img.url}}" alt="img_post">
+     			 <div class="caption">
+        			<h3>{{ar.post_title}}</h3>
+        			<p>{{ar.post_date}}</p>
+        			<p><a href="{{ar.get_absolute_url}}" class="btn btn-primary" role="button">Ver Articulo</a></p>
+      			 </div>
+    			</div>
+  			</div>
+  			{% endfor %}
+		</div>
+	</center>
+	</div>
+</div>
+{%endblock content%}
