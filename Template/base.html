@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/site_styles.css'%}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css'%}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/loader.css'%}">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
   <link href="{% static "css/vibrant-ink.css" %}" rel="stylesheet">
 </head> 
 <body id="page-top" >
@@ -86,7 +86,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
-<script src="{% static 'js/viewportchecker.js'%}"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
 <script src="{% static "js/prettify/prettify.js" %}"></script>
 
 {%block scripts%}
@@ -134,19 +135,19 @@ $(document).ready(function(){
 });
 </script>
 <script>
-    jQuery(document).ready(function() {
-    jQuery('.skills, .front').viewportChecker({classToAdd: 'visible animated fadeIn',offset: 100});
-    jQuery('.python').viewportChecker({classToAdd:'visible animated fadeInLeft',offset:100});
-    jQuery('.dj').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});
-    jQuery('.js').viewportChecker({classToAdd:'visible animated bounceInDown',offset:100});
-    jQuery('.react').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});    
-    jQuery('.bskt, .pul').viewportChecker({classToAdd:'visible animated wobble',offset:100});
-    jQuery('.formacion').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});
-    jQuery('.panel').viewportChecker({classToAdd:'visible animated shake',offset:100});
-    jQuery('.color').viewportChecker({classToAdd:'visible animated fadeIn',offset:100});
-    jQuery('#contact').viewportChecker({classToAdd:'visible animated bounceIn',offset:100});
-    jQuery('.thumbnail').viewportChecker({classToAdd:'visible animated fadeInUp',offset:100});
-});
+    $(document).ready(function() {
+      $('.skills, .front').viewportChecker({classToAdd: 'visible animated fadeIn',offset: 100});
+      $('.python').viewportChecker({classToAdd:'visible animated fadeInLeft',offset:100});
+      $('.dj').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});
+      $('.js').viewportChecker({classToAdd:'visible animated bounceInDown',offset:100});
+      $('.react').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});    
+      $('.bskt, .pul').viewportChecker({classToAdd:'visible animated wobble',offset:100});
+      $('.formacion').viewportChecker({classToAdd:'visible animated fadeInRight',offset:100});
+      $('.panel').viewportChecker({classToAdd:'visible animated shake',offset:100});
+      $('.color').viewportChecker({classToAdd:'visible animated fadeIn',offset:100});
+      $('#contact').viewportChecker({classToAdd:'visible animated bounceIn',offset:100});
+      $('.thumbnail').viewportChecker({classToAdd:'visible animated fadeInUp',offset:100});
+    });
 </script>
 
 <script type="text/javascript">
