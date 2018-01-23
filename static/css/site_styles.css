@@ -102,7 +102,7 @@ div#Habilidades .formacion{
   opacity: 0;
 }
 
-div#Habilidades .pyhthon{
+div#Habilidades .python{
   width: 300px;
   height: 150px;
   opacity: 0;
@@ -161,6 +161,12 @@ div#Habilidades img.bskt{
 div#Habilidades img.pul{
   width: 300px;
   height: 140px;
+}
+
+div#Habilidades img.odo{
+  width: 220px;
+  height: 90px;
+  opacity: 0;
 }
 
 div#Habilidades div.color{
