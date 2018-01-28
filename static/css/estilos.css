@@ -2,20 +2,18 @@
 
 /*Estilos Generales*/
 body {
-    background-color: #ffffff;
+    background-color: black;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    color: #555;
-
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, i {
   font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #333;
+  font-weight: 700;
+  color: white;
 }
 
 
@@ -42,12 +40,14 @@ div.navbar {
 div.navbar-inverse {
   padding-bottom: 35px;
   padding-top: 35px;
+  background-color: #3F51B5;
+  border-color: #3F51B5;
 }
 
-div.navbar-inverse {
+/*div.navbar-inverse {
   background-color: #2196F3;
   border-color: #2196F3;
-}
+}*/
 
 div.navbar-inverse .navbar-nav > li > a {
   color: white;
@@ -76,13 +76,13 @@ div.navbar-inverse .navbar-toggle {
 div#Hola {
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: #E3F2FD;
-  color: #555;
+  background-color:black;
+  color: white;
 }
 
 div#Hola img.fotito{
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 500px;
 
 }
@@ -90,7 +90,7 @@ div#Hola img.fotito{
 div#Habilidades {
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color:#FFF176;
+  background-color: black;
   font-size: 15px;
 }
 
@@ -175,7 +175,7 @@ div#Habilidades div.color{
 
 /*Estilos de mi footer*/
 .footer {
-  background-color: #2196F3;
+  background-color: #3F51B5;
   color:white;
   }
 
@@ -200,7 +200,7 @@ div#Habilidades div.color{
 /*Estilos para paneles*/
 
 .panel-default:hover{
-box-shadow: 0px 5px 5px #2196F3;
+box-shadow: 0px 5px 5px #3F51B5;
 animation: pulse 3s infinite;
 }
 
@@ -223,17 +223,17 @@ animation: pulse 3s infinite;
 }
 
 .panel-default{
-background-color: #E3F2FD;
+background-color: black;
 }
 
 .panel-default > .panel-heading-custom{
-  background: #2196F3;
+  background: #3F51B5;
   color: #fff;
 
 }
 
 .panel-default > .panel-footer-custom{
-  background: #2196F3;
+  background: #3F51B5;
   color: #fff;
 
 }
@@ -324,8 +324,8 @@ box-shadow: 5px 5px 5px 5px  black;
 
 .btn-primary {
     color: white;
-    background-color: #2196F3;
-    border-color: #2196F3;
+    background-color: #3F51B5;
+    border-color: #3F51B5;
     transition: all 1s;
 }
 
@@ -343,17 +343,20 @@ box-shadow: 5px 5px 5px 5px  black;
 div#blog span{
   font-weight: 800;
   font-size: 60px;
-  text-shadow: 6px 6px black;
-  border-color: #fff;
-  color: #FFF176;
+  text-shadow: 6px 6px white;
+  border-color: white;
+  color: #3F51B5;
   border-radius: 10px;
 }
 
 div#blog a{
   color: black;
   border-radius: 500px;
-  background-color: #FFF176;
-  border-color: #FFF176;
+  background-color: #3F51B5;
+  border-color: #3F51B5;
   border-width: 5px;
 
 }
+
+
+
