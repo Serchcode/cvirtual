@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import View
+from wsgiref.util import FileWrapper
 import requests
 import json
 
@@ -44,7 +45,6 @@ class ContactView(View):
 	def get(self,request):
 		templatename = "contacto.html"
 		return render(request,templatename)
-	
-		
-	
+
+
 
