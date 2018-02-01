@@ -7,11 +7,13 @@ from django.conf import settings
 from django.contrib.staticfiles import views
 from django.conf.urls import handler404, handler500
 from . import views
+from blog.api import urls as blogApi
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^',include(homeUrls,namespace="main")),
     url(r'^blog/',include(blogUrls, namespace="blog")),
+    url(r'^',include(blogApi, namespace="blogApi")),
     #url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(regex=r'^media/(?P<path>.*)$',view=serve,kwargs={'document_root':settings.MEDIA_ROOT}),
 ]

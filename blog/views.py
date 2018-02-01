@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import View
 from .models import Post
 
+
 class ListView(View):
 	def get(self, request):
 		article = Post.objects.all()		
@@ -19,3 +20,4 @@ class DetailView(View):
 		'post':post,
 		}
 		return render(request,template_name,context)
+
