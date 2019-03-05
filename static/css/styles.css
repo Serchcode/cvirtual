@@ -257,7 +257,7 @@ background-color: black;
   top:75px;
   right:40px;
   display:none;
-  background: url('arrow_up.png') no-repeat 0px 20px;
+  /*background: url('arrow_up.png') no-repeat 0px 20px;*/
   -webkit-animation: bounce 1s infinite;
 }
 .scrollToTop:hover{
@@ -376,4 +376,13 @@ div#blog a{
 
 .cuatro{
   padding-top: 20%;
+}
+
+div#Habilidades img.iupick{
+  width: 150px;
+  height: 100px;
+}
+div#Habilidades img.ihce{
+  width: 300px;
+  height: 100px;
 }

@@ -1,4 +1,4 @@
- @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*Estilos Generales*/
 body {
@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6, p, i {
   color: white;
 }
 
+ul {
+  color: white;
+  font-weight: 700;
+}
 
 .hidden{
      opacity:0;
@@ -253,7 +257,7 @@ background-color: black;
   top:75px;
   right:40px;
   display:none;
-  /*background: url('arrow_up.png') no-repeat 0px 20px;*/
+  background: url('arrow_up.png') no-repeat 0px 20px;
   -webkit-animation: bounce 1s infinite;
 }
 .scrollToTop:hover{
@@ -358,5 +362,27 @@ div#blog a{
 
 }
 
+.btn-success {
+    color: #fff;
+    background-color: #3F51B5;
+    border-color: #3F51B5;
+}
 
+.btn-success:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
 
+.cuatro{
+  padding-top: 20%;
+}
+
+div#Habilidades img.iupick{
+  width: 150px;
+  height: 100px;
+}
+div#Habilidades img.ihce{
+  width: 300px;
+  height: 100px;
+}

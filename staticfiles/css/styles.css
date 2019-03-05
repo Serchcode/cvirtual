@@ -151,6 +151,12 @@ div#Habilidades img.vendelo{
   height: 100px;
 }
 
+div#Habilidades img.iupick{
+  width: 100px;
+  height: 150px;
+}
+
+
 
 @media only screen and (max-width: 600px) {
   div#Habilidades img.react{opacity: 0;}
@@ -257,7 +263,7 @@ background-color: black;
   top:75px;
   right:40px;
   display:none;
-  background: url('arrow_up.png') no-repeat 0px 20px;
+  /*background: url('arrow_up.png') no-repeat 0px 20px;*/
   -webkit-animation: bounce 1s infinite;
 }
 .scrollToTop:hover{
@@ -376,4 +382,393 @@ div#blog a{
 
 .cuatro{
   padding-top: 20%;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*Estilos Generales*/
+body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6, p, i {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+ul {
+  color: white;
+  font-weight: 700;
+}
+
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+
+
+.centered {
+    text-align: center;
+}
+
+
+
+/*Estilos de mi navbar*/
+div.navbar {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+div.navbar-inverse {
+  padding-bottom: 35px;
+  padding-top: 35px;
+  background-color: #3F51B5;
+  border-color: #3F51B5;
+}
+
+/*div.navbar-inverse {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}*/
+
+div.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+div.navbar-inverse .navbar-nav > li > a:hover {
+  color: #222222;
+}
+
+div.navbar-brand {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+div.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+div.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+
+
+/*Estilos de algunos elementos y animaciones*/
+div#Hola {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color:black;
+  color: white;
+}
+
+div#Hola img.fotito{
+  width: 300px;
+  height: 300px;
+  border-radius: 500px;
+
+}
+
+div#Habilidades {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: black;
+  font-size: 15px;
+}
+
+/*#FFF176*/
+
+div#Habilidades .formacion{
+  width: 170px;
+  height: 150px;  
+  opacity: 0;
+}
+
+div#Habilidades .python{
+  width: 300px;
+  height: 150px;
+  opacity: 0;
+}
+
+div#Habilidades .dj{
+  opacity: 0;
+}
+
+div#Habilidades .skills{
+  width: 200px;
+  height: 100px;
+  opacity: 0;
+
+} 
+
+div#Habilidades .front{
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+div#Habilidades img.js{
+  width: 150px;
+  height: 150px;  
+}
+
+
+div#Habilidades img.react{
+
+  width: 220px;
+  height: 200px;  
+ 
+}
+
+div#Habilidades img.terreno{
+  padding-top: 33px;
+}
+
+div#Habilidades img.vendelo{
+  width: 100px;
+  height: 100px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  div#Habilidades img.react{opacity: 0;}
+}
+
+
+div#Habilidades img.bskt{
+  width: 150px;
+  height: 150px;  
+}
+
+div#Habilidades img.pul{
+  width: 300px;
+  height: 140px;
+}
+
+div#Habilidades img.odo{
+  width: 220px;
+  height: 90px;
+  opacity: 0;
+}
+
+div#Habilidades div.color{
+    opacity: 0;
+}
+
+/*Estilos de mi footer*/
+.footer {
+  background-color: #3F51B5;
+  color:white;
+  }
+
+.foot-social {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.foot-social li {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.foot-social a {
+  text-decoration: none;
+  background: transparent;
+  color: white;
+}
+/*Estilos para paneles*/
+
+.panel-default:hover{
+box-shadow: 0px 5px 5px #3F51B5;
+animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+.panel-default{
+background-color: black;
+}
+
+.panel-default > .panel-heading-custom{
+  background: #3F51B5;
+  color: #fff;
+
+}
+
+.panel-default > .panel-footer-custom{
+  background: #3F51B5;
+  color: #fff;
+
+}
+
+
+  .scrollToTop{
+  width:100px; 
+  height:130px;
+  padding-top:400px; 
+  padding-left: 100px;
+  text-align:center; 
+  background: whiteSmoke;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  position:fixed;
+  top:75px;
+  right:40px;
+  display:none;
+  /*background: url('arrow_up.png') no-repeat 0px 20px;*/
+  -webkit-animation: bounce 1s infinite;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}
+@-webkit-keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+div#Habilidades div.color{
+  opacity: 0;
+}
+
+div.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: white;
+    color: black;
+    
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s;
+    }
+
+div.thumbnail>img {
+    width: 350px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+div.caption>p{
+  color: black;
+}
+
+div.caption>h3{
+  color: black;
+}
+
+div.thumbnail:hover{
+box-shadow: 5px 5px 5px 5px  black;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #3F51B5;
+    border-color: #3F51B5;
+    transition: all 1s;
+}
+
+.btn-primary:hover {
+    color: black;
+    border-color: black;
+    background-color: transparent;
+}
+
+.jumbotron {
+    padding-top: 160px;
+    padding-bottom: 48px;
+}
+
+div#blog span{
+  font-weight: 800;
+  font-size: 60px;
+  text-shadow: 6px 6px white;
+  border-color: white;
+  color: #3F51B5;
+  border-radius: 10px;
+}
+
+div#blog a{
+  color: black;
+  border-radius: 500px;
+  background-color: #3F51B5;
+  border-color: #3F51B5;
+  border-width: 5px;
+
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #3F51B5;
+    border-color: #3F51B5;
+}
+
+.btn-success:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.cuatro{
+  padding-top: 20%;
+}
+
+div#Habilidades img.iupick{
+  width: 150px;
+  height: 100px;
+}
+div#Habilidades img.ihce{
+  width: 300px;
+  height: 100px;
 }
